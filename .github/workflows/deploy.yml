@@ -17,5 +17,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./
           server-dir: /home/redhorse5/www/wp/wp-content/themes/real-estate-theme/
