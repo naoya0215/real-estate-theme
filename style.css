@@ -394,3 +394,14 @@ footer {
 .property-single a:hover {
     opacity: 0.7;
 }
+
+
+@media (max-width: 768px) {
+    .property-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .service__list {
+        grid-template-columns: 1fr;
+    }
+}
