@@ -1,0 +1,396 @@
+/*
+Theme Name: Real Estate Theme
+Theme URI: 
+Author: Naoya Kobayashi
+Description: 不動産賃貸サイト
+Version: 1.0
+*/
+
+/* ===========================
+   リセット・基本設定
+=========================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   共通
+=========================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   ヘッダー
+=========================== */
+header {
+    background-color: #000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+   フッター
+=========================== */
+footer {
+    background-color: #1a2e4a;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    font-size: 14px;
+}
+
+
+/* ===========================
+   トップページ共通
+=========================== */
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2e4a;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1a2e4a;
+    margin: 15px auto 0;
+}
+
+/* ===========================
+   ヒーローエリア
+=========================== */
+.hero {
+    background: burlywood;
+    color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.hero__sub {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.hero__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: 16px 50px;
+    background-color: #fff;
+    color: #1a2e4a;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   新着物件
+=========================== */
+.pickup {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.pickup__more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 2px solid #1a2e4a;
+    color: #1a2e4a;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.more-btn:hover {
+    background-color: #1a2e4a;
+    color: #fff;
+}
+
+/* ===========================
+   サービス紹介
+=========================== */
+.service {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.service__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service__item {
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service__icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.service__item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 15px;
+}
+
+.service__item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* ===========================
+   物件一覧
+=========================== */
+.property-archive {
+    padding: 60px 0;
+}
+
+.property-archive h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #1a2e4a;
+}
+
+.property-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.property-card {
+    display: block;
+    color: inherit;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.property-card__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card__image {
+    background-color: #e0e6ef;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.property-card__body {
+    padding: 20px;
+}
+
+.property-card__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1a2e4a;
+}
+
+.property-card__title a:hover {
+    opacity: 0.7;
+}
+
+.property-card__info {
+    list-style: none;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.property-card__info li:first-child {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2e4a;
+}
+
+/* ===========================
+   物件詳細
+=========================== */
+.property-single {
+    padding: 60px 0;
+}
+
+.property-single h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 30px;
+}
+
+.property-single__image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.property-single__info table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.property-single__info th,
+.property-single__info td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.property-single__info th {
+    background-color: #1a2e4a;
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+}
+
+.property-single__info td {
+    color: #333;
+}
+
+.property-single__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.property-single__gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.property-single a {
+    display: inline-block;
+    margin-top: 40px;
+    color: #1a2e4a;
+    font-weight: 700;
+    border-bottom: 2px solid #1a2e4a;
+    padding-bottom: 3px;
+    transition: opacity 0.2s;
+}
+
+.property-single a:hover {
+    opacity: 0.7;
+}
