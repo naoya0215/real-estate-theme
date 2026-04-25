@@ -5,7 +5,42 @@
     <div class="hero__inner">
         <p class="hero__sub">理想の住まいを探そう</p>
         <h1 class="hero__title">あなたにぴったりの<br>物件が見つかる</h1>
-        <a href="<?php echo home_url('/property/'); ?>" class="hero__btn">物件を探す</a>
+
+        <!-- 検索フォーム -->
+        <form method="GET" action="<?php echo home_url('/property/'); ?>" class="hero__search">
+            <div class="hero__search__inner">
+                <div class="hero__search__item">
+                    <select name="area">
+                        <option value="">エリアを選ぶ</option>
+                        <option value="tokyo">東京都</option>
+                        <option value="osaka">大阪府</option>
+                        <option value="nagoya">愛知県</option>
+                    </select>
+                </div>
+                <div class="hero__search__item">
+                    <select name="layout">
+                        <option value="">間取りを選ぶ</option>
+                        <option value="1R">1R</option>
+                        <option value="1K">1K</option>
+                        <option value="1DK">1DK</option>
+                        <option value="1LDK">1LDK</option>
+                        <option value="2LDK">2LDK</option>
+                        <option value="3LDK">3LDK</option>
+                    </select>
+                </div>
+                <div class="hero__search__item">
+                    <select name="rent">
+                        <option value="">賃料を選ぶ</option>
+                        <option value="50000">〜5万円</option>
+                        <option value="100000">5〜10万円</option>
+                        <option value="150000">10〜15万円</option>
+                        <option value="999999">15万円〜</option>
+                    </select>
+                </div>
+                <button type="submit" class="hero__search__btn">検索する</button>
+            </div>
+        </form>
+
     </div>
 </section>
 

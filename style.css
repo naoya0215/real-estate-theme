@@ -276,13 +276,12 @@ footer {
 
 .property-card__image img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
 }
 
 .property-card__image {
     background-color: #e0e6ef;
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,7 +333,7 @@ footer {
 
 .property-single__image img {
     width: 100%;
-    height: 450px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 40px;
@@ -395,8 +394,135 @@ footer {
     opacity: 0.7;
 }
 
+/* ===========================
+   ヒーロー検索フォーム
+=========================== */
+.hero__search {
+    margin-top: 40px;
+}
+
+.hero__search__inner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__search__item select {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+.hero__search__btn {
+    padding: 14px 30px;
+    background-color: #c8a96e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.hero__search__btn:hover {
+    opacity: 0.8;
+}
+
+
+/* ===========================
+   検索フォーム
+=========================== */
+.search-form {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.search-form__inner {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.search-form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.search-form__item label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a2e4a;
+}
+
+.search-form__item select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.search-form__btn {
+    padding: 12px 30px;
+    background-color: #1a2e4a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.search-form__btn:hover {
+    opacity: 0.8;
+}
+
+.no-result {
+    text-align: center;
+    padding: 60px 0;
+    color: #666;
+    font-size: 16px;
+}
+
 
 @media (max-width: 768px) {
+    .hero__search__inner {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__search__item {
+        width: 100%;
+    }
+
+    .hero__search__item select {
+        width: 100%;
+    }
+
+    .hero__search__btn {
+        width: 100%;
+    }
+
     .property-list {
         grid-template-columns: 1fr;
     }
@@ -404,4 +530,88 @@ footer {
     .service__list {
         grid-template-columns: 1fr;
     }
+
+    .search-form__inner {
+        flex-direction: column;
+    }
+
+    .search-form__btn {
+        width: 100%;
+    }
+}
+
+
+/* ===========================
+   お問い合わせ
+=========================== */
+.contact {
+    padding: 60px 0;
+}
+
+.contact h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #1a2e4a;
+}
+
+.contact__lead {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact__form {
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.contact__form .wpcf7-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 20px;
+}
+
+.contact__form .wpcf7-form input[type="text"],
+.contact__form .wpcf7-form input[type="email"],
+.contact__form .wpcf7-form input[type="tel"],
+.contact__form .wpcf7-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+
+.contact__form .wpcf7-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact__form .wpcf7-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #1a2e4a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 10px;
+}
+
+.contact__form .wpcf7-form input[type="submit"]:hover {
+    opacity: 0.8;
 }
